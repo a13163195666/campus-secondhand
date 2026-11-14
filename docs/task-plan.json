@@ -1,0 +1,316 @@
+{
+  "schemaVersion": "1.0",
+  "project": "校园二手交易平台",
+  "direction": "Web",
+  "source": "《前端开发实训》课程考核说明",
+  "assumptions": {
+    "teamSize": 5,
+    "memberNames": "M1—M5待替换真实姓名",
+    "schedule": "建议12个开发工作日，D1由小组确认，最终按教师截止日期调整",
+    "progress": "所有任务待验收；已有实现验证通过后可直接关闭"
+  },
+  "technology": [
+    "Vue 3",
+    "Vite",
+    "Vue Router",
+    "Pinia",
+    "JavaScript",
+    "响应式CSS",
+    "Git",
+    "ESLint",
+    "Prettier"
+  ],
+  "courseRequirements": [
+    "至少3个页面或视图",
+    "至少5个有意义的Vue组件",
+    "Vue Router页面切换",
+    "至少一个表单及表单验证",
+    "列表数据处理",
+    "搜索、筛选、排序、分页至少两项",
+    "至少一次共享状态管理",
+    "至少一次持久化或Mock数据",
+    "桌面和手机适配",
+    "npm install、npm run dev、npm run build可执行",
+    "全员参与开发并说明负责代码",
+    "阶段验收至少3页和1个完整核心流程"
+  ],
+  "scope": {
+    "pages": ["商品首页", "商品详情", "发布商品", "个人中心", "我的订单"],
+    "coreFlow": ["发布", "搜索浏览", "详情", "模拟下单", "卖家确认完成"],
+    "data": "Mock与localStorage",
+    "identity": "可切换本地演示身份，非真实登录",
+    "optional": ["图片上传", "分页", "真实接口"],
+    "excluded": ["真实支付", "实时聊天", "物流"]
+  },
+  "members": [
+    {
+      "id": "M1",
+      "role": "项目负责人",
+      "development": "工程、路由、公共布局、集成"
+    },
+    {
+      "id": "M2",
+      "role": "需求与原型负责人",
+      "development": "首页、搜索、筛选、排序"
+    },
+    {
+      "id": "M3",
+      "role": "页面与组件负责人",
+      "development": "详情、公共组件、收藏、响应式"
+    },
+    {
+      "id": "M4",
+      "role": "数据与交互负责人",
+      "development": "Pinia、持久化、发布编辑上下架、个人中心"
+    },
+    {
+      "id": "M5",
+      "role": "测试、文档与展示负责人",
+      "development": "订单与交易状态"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T01",
+      "title": "确认范围、姓名、分工和截止时间",
+      "owner": "M1",
+      "days": "D1",
+      "dependsOn": [],
+      "status": "todo",
+      "acceptance": ["五人确认模块", "均可拉取仓库并创建分支"]
+    },
+    {
+      "id": "T02",
+      "title": "需求、五页草图和流程设计",
+      "owner": "M2",
+      "days": "D1-D2",
+      "dependsOn": ["T01"],
+      "status": "todo",
+      "acceptance": ["各页入口、操作、返回及异常场景明确", "组内评审通过"]
+    },
+    {
+      "id": "T03",
+      "title": "工程、导航、路由和代码规范",
+      "owner": "M1",
+      "days": "D1-D2",
+      "dependsOn": ["T01"],
+      "status": "todo",
+      "acceptance": ["五页及404可访问", "安装启动构建成功"]
+    },
+    {
+      "id": "T04",
+      "title": "数据契约、Pinia和持久化",
+      "owner": "M4",
+      "days": "D2",
+      "dependsOn": ["T01"],
+      "status": "todo",
+      "acceptance": [
+        "统一字段和状态方法",
+        "刷新保留数据",
+        "坏缓存可回退",
+        "保存失败有提示"
+      ]
+    },
+    {
+      "id": "T05",
+      "title": "首页列表及搜索筛选排序",
+      "owner": "M2",
+      "days": "D3-D5",
+      "dependsOn": ["T02", "T03", "T04"],
+      "status": "todo",
+      "acceptance": [
+        "搜索筛选排序可组合",
+        "只显示在售商品",
+        "空结果有提示"
+      ]
+    },
+    {
+      "id": "T06",
+      "title": "详情页与公共组件",
+      "owner": "M3",
+      "days": "D3-D4",
+      "dependsOn": ["T02", "T03", "T04"],
+      "status": "todo",
+      "acceptance": [
+        "路由ID对应正确商品",
+        "无效ID有反馈",
+        "项目累计至少5个有意义组件"
+      ]
+    },
+    {
+      "id": "T07",
+      "title": "收藏及收藏列表",
+      "owner": "M3",
+      "days": "D5-D6",
+      "dependsOn": ["T06"],
+      "status": "todo",
+      "acceptance": ["收藏取消同步", "刷新保留", "无重复收藏"]
+    },
+    {
+      "id": "T08",
+      "title": "发布与编辑表单",
+      "owner": "M4",
+      "days": "D3-D5",
+      "dependsOn": ["T02", "T03", "T04"],
+      "status": "todo",
+      "acceptance": [
+        "标题非空白且价格合法",
+        "成功更新列表",
+        "失败保留输入并提示"
+      ]
+    },
+    {
+      "id": "T09",
+      "title": "我的发布和上下架",
+      "owner": "M4",
+      "days": "D6-D7",
+      "dependsOn": ["T08"],
+      "status": "todo",
+      "acceptance": [
+        "仅操作自己商品",
+        "下架商品不公开展示",
+        "已售商品不能重新上架"
+      ]
+    },
+    {
+      "id": "T10",
+      "title": "模拟下单与订单完成",
+      "owner": "M5",
+      "days": "D3-D7",
+      "dependsOn": ["T02", "T03", "T04"],
+      "status": "todo",
+      "acceptance": [
+        "禁止购买自己、下架或已售商品",
+        "禁止重复下单",
+        "订单持久化",
+        "只有卖家可确认完成"
+      ]
+    },
+    {
+      "id": "T11",
+      "title": "阶段验收与缺陷指派",
+      "owner": "M1",
+      "days": "D8",
+      "dependsOn": ["T05", "T06", "T08", "T09", "T10"],
+      "status": "todo",
+      "acceptance": [
+        "至少3页和1个完整流程演示通过",
+        "有验收记录和缺陷清单",
+        "未通过先修复再进入最终提交"
+      ]
+    },
+    {
+      "id": "T12",
+      "title": "手机适配与异常体验",
+      "owner": "M3",
+      "days": "D9",
+      "dependsOn": ["T07", "T11"],
+      "status": "todo",
+      "acceptance": [
+        "375px和1280px无溢出",
+        "控件有标签",
+        "空状态与错误反馈清楚"
+      ]
+    },
+    {
+      "id": "T13",
+      "title": "回归测试和干净环境构建",
+      "owner": "M5",
+      "days": "D9-D10",
+      "dependsOn": ["T12"],
+      "status": "todo",
+      "acceptance": [
+        "核心流程和边界测试通过",
+        "刷新后数据一致",
+        "lint、格式检查、构建通过"
+      ]
+    },
+    {
+      "id": "T14",
+      "title": "文档和演示素材",
+      "owner": "M5",
+      "days": "D10",
+      "dependsOn": ["T13"],
+      "status": "todo",
+      "acceptance": [
+        "README覆盖附件要求",
+        "写明数据来源和模拟限制",
+        "说明参考资料及工具使用范围"
+      ]
+    },
+    {
+      "id": "T15",
+      "title": "全员答辩演练",
+      "owner": "M1",
+      "days": "D11",
+      "dependsOn": ["T14"],
+      "status": "todo",
+      "acceptance": ["5—6分钟展示", "每人解释负责代码并能现场修改"]
+    },
+    {
+      "id": "T16",
+      "title": "贡献核对与最终提交",
+      "owner": "M1",
+      "days": "D12",
+      "dependsOn": ["T15"],
+      "status": "todo",
+      "acceptance": [
+        "五份个人总结和代码说明齐全",
+        "源码与演示版本一致",
+        "交付清单通过"
+      ]
+    }
+  ],
+  "dataContract": {
+    "goods": [
+      "id", "title", "price", "category", "condition",
+      "description", "image", "sellerId", "status", "createdAt"
+    ],
+    "orders": [
+      "id", "goodsId", "buyerId", "sellerId",
+      "titleSnapshot", "priceSnapshot", "status",
+      "createdAt", "completedAt"
+    ],
+    "favorites": ["userId", "goodsId"],
+    "goodsStatus": ["available", "offline", "sold"],
+    "orderStatus": ["pending", "completed"],
+    "purchase": "同时创建pending订单并将商品设为sold",
+    "completion": "仅卖家可将pending订单设为completed",
+    "saveFailure": "保存失败不得报告成功",
+    "limitations": ["本地模拟", "无取消退款", "无跨设备同步"]
+  },
+  "collaboration": {
+    "platform": "GitHub",
+    "branches": ["feat/模块名", "fix/问题名", "docs/主题名"],
+    "rules": [
+      "按任务建立Issue",
+      "从最新main创建分支",
+      "PR关联Issue并由至少另一人审阅",
+      "M4协调共享store及个人中心",
+      "M3与M5协商详情下单入口",
+      "合并前通过相关验证",
+      "每日更新进度",
+      "D5提前集成",
+      "不提交依赖目录或凭据"
+    ],
+    "definitionOfDone": [
+      "代码审阅合并",
+      "验收通过",
+      "文档日志更新",
+      "负责人能解释实现"
+    ]
+  },
+  "submission": [
+    "完整源码、配置及锁文件",
+    "README和项目说明",
+    "截图或演示视频",
+    "运行构建说明",
+    "真实姓名分工",
+    "五份个人总结及代码说明",
+    "Git记录或开发日志",
+    "测试报告及已知问题",
+    "参考资料与工具使用说明",
+    "最终Git版本标识"
+  ],
+  "statuses": ["todo", "in_progress", "blocked", "in_review", "done"]
+}
