@@ -9,8 +9,8 @@
 | 组长（工程、路由、布局、集成） | 贾世爱 | a13163195666 | `feature/leader` |
 | 首页与需求（列表、搜索、筛选、排序、草图） | 张艺苧 | ZTenVIC | `feature/home` |
 | 页面与组件（ProductCard、详情页、手机适配） | 祁点 | ivan737373 | `feature/pages` |
-| 数据与交互（store、Mock、发布、个人中心） | 张语桐 | xiaoyingtaoddd | `feature/profile` |
-| 订单与测试文档（订单、测试、README、演示） | 吴汶睿 | Matryoshka64064 | `feature/data` |
+| 数据与交互（store、Mock、发布、个人中心） | 张语桐 | xiaoyingtaoddd | `feature/data` |
+| 订单与测试文档（订单、测试、README、演示） | 吴汶睿 | Matryoshka64064 | `feature/orders` |
 
 ## 1. 命名统一
 
@@ -25,7 +25,7 @@
 ## 2. 分支规范
 
 - 分支统一用 `feature/` 前缀，**不要有人用 `feat/`**
-- 已有分支：`feature/leader`、`feature/home`、`feature/pages`、`feature/data`、`feature/profile`
+- 已有分支：`feature/leader`、`feature/home`、`feature/pages`、`feature/data`、`feature/orders`
 - 所有人都从最新的 `main` 起步
 
 ```powershell
