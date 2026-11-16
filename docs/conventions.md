@@ -7,10 +7,10 @@
 | 角色 | 真实姓名 | GitHub 用户名 | 分支 |
 | --- | --- | --- | --- |
 | 组长（工程、路由、布局、集成） | 贾世爱 | a13163195666 | `feature/leader` |
-| 首页与需求（列表、搜索、筛选、排序、草图） | 张艺苧 | ZTenVIC | `feature/home` |
+| 首页与需求（列表、搜索、筛选、排序、草图） | 张语桐 | xiaoyingtaoddd | `feature/home` |
 | 页面与组件（ProductCard、详情页、手机适配） | 祁点 | ivan737373 | `feature/pages` |
-| 数据与交互（store、Mock、发布、个人中心） | 张语桐 | xiaoyingtaoddd | `feature/data` |
-| 订单与测试文档（订单、测试、README、演示） | 吴汶睿 | Matryoshka64064 | `feature/orders` |
+| 数据与交互（store、Mock、发布、个人中心） | 吴汶睿 | Matryoshka64064 | `feature/data` |
+| 订单与测试文档（订单、测试、README、演示） | 张艺苧 | ZTenVIC | `feature/orders` |
 
 ## 1. 命名统一
 
