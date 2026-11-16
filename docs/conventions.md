@@ -7,10 +7,10 @@
 | 角色 | 真实姓名 | GitHub 用户名 | 分支 |
 | --- | --- | --- | --- |
 | 组长（工程、路由、布局、集成） | 贾世爱 | a13163195666 | `feature/leader` |
-| 首页与需求（列表、搜索、筛选、排序、草图） |  |  | `feature/home` |
-| 页面与组件（ProductCard、详情页、手机适配） |  |  | `feature/pages` |
-| 数据与交互（store、Mock、发布、个人中心） |  |  | `feature/profile` |
-| 订单与测试文档（订单、测试、README、演示） |  |  | `feature/data` |
+| 首页与需求（列表、搜索、筛选、排序、草图） | 张艺苧 | ZTenVIC | `feature/home` |
+| 页面与组件（ProductCard、详情页、手机适配） | 祁点 | ivan737373 | `feature/pages` |
+| 数据与交互（store、Mock、发布、个人中心） | 张语桐 | xiaoyingtaoddd | `feature/profile` |
+| 订单与测试文档（订单、测试、README、演示） | 吴汶睿 | Matryoshka64064 | `feature/data` |
 
 ## 1. 命名统一
 
@@ -119,7 +119,7 @@ chore: 统一命名
 发布商品 → 首页能看到 → 点击进入详情 → 刷新后仍然存在
 ```
 
-检查时间：**______（由组长填入具体日期和时间）**
+检查时间：**2026年11月17日 20:00（暂定，会上确认后可改）**
 
 检查方式：每人说明自己负责的部分如何验证，现场演示，不允许只看截图。
 
