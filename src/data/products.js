@@ -98,7 +98,21 @@ export const initialProducts = [
     status: 'sold',
     createdAt: '2026-11-09T20:00:00',
   },
+  {
+    id: 9,
+    title: '桌面折叠书架',
+    price: 16,
+    category: '生活用品',
+    condition: '九成新',
+    description: '适合宿舍书桌，折叠后方便收纳。',
+    image: '',
+    sellerId: 102,
+    status: 'available',
+    createdAt: '2026-11-13T09:00:00',
+  },
 ]
 
 // 分类列表，供筛选下拉使用
 export const categories = ['教材', '电子产品', '生活用品', '运动器材']
+
+export const currentUserId = 101
