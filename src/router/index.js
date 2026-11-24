@@ -19,6 +19,11 @@ const router = createRouter({
       component: () => import('../views/PublishView.vue'),
     },
     {
+      path: '/product/:id/edit',
+      name: 'product-edit',
+      component: () => import('../views/PublishView.vue'),
+    },
+    {
       path: '/profile',
       name: 'profile',
       component: () => import('../views/ProfileView.vue'),
@@ -27,6 +32,11 @@ const router = createRouter({
       path: '/orders',
       name: 'orders',
       component: () => import('../views/OrderView.vue'),
+    },
+    {
+      path: '/favorites',
+      name: 'favorites',
+      component: () => import('../views/FavoritesView.vue'),
     },
     {
       path: '/:pathMatch(.*)*',

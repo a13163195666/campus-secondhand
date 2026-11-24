@@ -49,6 +49,10 @@ export const useProductStore = defineStore('product', () => {
     return products.value.filter((p) => p.sellerId === Number(sellerId))
   }
 
+  function getProductsByBuyer(buyerId) {
+    return products.value.filter((product) => product.buyerId === buyerId)
+  }
+
   function addProduct(product) {
     const maxId = products.value.reduce((max, p) => Math.max(max, p.id), 0)
     const newProduct = {
@@ -57,15 +61,28 @@ export const useProductStore = defineStore('product', () => {
       createdAt: new Date().toISOString(),
       ...product,
     }
-    products.value.push(newProduct)
+    const next = [...products.value, newProduct]
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(next))
+    products.value = next
     return newProduct
   }
 
   function updateProduct(id, changes) {
     const target = getProductById(id)
     if (!target) return null
+    const updated = { ...target, ...changes }
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify(products.value.map((product) => (product === target ? updated : product))),
+    )
     Object.assign(target, changes)
     return target
+  }
+
+  function buyProduct(id, buyerId) {
+    const product = getProductById(id)
+    if (!product || product.status !== 'available' || product.sellerId === buyerId) return null
+    return updateProduct(id, { status: 'sold', buyerId })
   }
 
   function removeProduct(id) {
@@ -81,6 +98,8 @@ export const useProductStore = defineStore('product', () => {
     getAvailableProducts,
     getProductById,
     getProductsBySeller,
+    getProductsByBuyer,
+    buyProduct,
     addProduct,
     updateProduct,
     removeProduct,
